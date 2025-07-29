@@ -59,9 +59,13 @@ tag_label = Label(root, text='Выбери тег')
 tag_label.pack()
 
 tag_combobox = ttk.Combobox(values=Allowed_tags)
+tag_combobox.set('sleep')  # Значение по умолчанию для выпадающего списка
 tag_combobox.pack()
 
 load_button = Button(text='Загрузить по тегу', command=open_new_window)
+load_button.pack()
+
+load_button = Button(text='Случайный котик', command=open_new_window)
 load_button.pack()
 
 root.mainloop()
